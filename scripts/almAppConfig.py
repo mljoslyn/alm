@@ -24,27 +24,27 @@ global BASE_PREDIX_DIR
 global almUaaName
 global almAcsName
 global almPredixAssetName
-global almPredixTimeseriesName
+#global almPredixTimeseriesName
 global almPostgre
 global almRedis
 global predixbootAppName
-global dataSeedAppName
+#global dataSeedAppName
 global dataSourceAppName
 #global httpDataRiverAppName
-global dataIngestionAppName
-global machineSimulatorAppName
+#global dataIngestionAppName
+#global machineSimulatorAppName
 global uiAppName
-global websocketAppName
+#global websocketAppName
 global predixUaaService
 global predixAcsService
 global predixAssetService
-global predixTimeSeriesService
+#global predixTimeSeriesService
 global predixPostgre
 global predixRedis
 global predixUaaServicePlan
 global predixAcsServicePlan
 global predixAssetServicePlan
-global predixTimeSeriesServicePlan
+#global predixTimeSeriesServicePlan
 global predixPostgrePlan
 global predixRedisPlan
 global almAppClientId
@@ -151,14 +151,14 @@ predixbootJSRRepoName = "predix-microservice-cf-jsr"
 
 # Predix Application Names
 print ('instanceAppender=' + instanceAppender)
-predixbootAppName = "predix-microservice-cf-jsr_"+instanceAppender
-dataSeedAppName = "data_seed_"+instanceAppender
+#predixbootAppName = "predix-microservice-cf-jsr_"+instanceAppender
+#dataSeedAppName = "data_seed_"+instanceAppender
 dataSourceAppName = "alm_datasource_"+instanceAppender
-httpDataRiverAppName = "http_datariver_"+instanceAppender
-dataIngestionAppName = "dataingestion_service_"+instanceAppender
-machineSimulatorAppName = "machinedata_simulator_"+instanceAppender
+#httpDataRiverAppName = "http_datariver_"+instanceAppender
+#dataIngestionAppName = "dataingestion_service_"+instanceAppender
+#machineSimulatorAppName = "machinedata_simulator_"+instanceAppender
 uiAppName = 'alm_ref_app_ui_'+instanceAppender
-websocketAppName = "websocket_service_"+instanceAppender
+#websocketAppName = "websocket_service_"+instanceAppender
 
 if environment == 'PROD':
     # Predix Service Instance Name for VPC
@@ -193,8 +193,8 @@ else :
     predixRedisPlan = "shared-vm"
 
 #Reference application client id
-almAppClientId = "mvp3_ref_app"
-almAppSecret = "mvp3ref@pp"
+almAppClientId = "mvp3_alm_app"
+almAppSecret = "mvp3alm@pp"
 #UAA Admin Account
 uaaAdminSecret = "alm_uaa_secret"
 clientGrantType = ["authorization_code","client_credentials","refresh_token","password"]
@@ -205,7 +205,7 @@ projectDir = "predix-microservice-templates"
 predixProject = projectDir+".git"
 #UAA User account for logging in to RMD Ref App
 almUser1 = "alm_user_1"
-almUser1Pass = "RMD_user_1"
+almUser1Pass = "ALM_user_1"
 #Admin User that is allowed to add asset data
 almAdmin1 = "alm_admin_1"
 almAdmin1Pass = "ALM_admin_1"
